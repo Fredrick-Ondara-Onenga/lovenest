@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lovenest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff;
+      position: relative;
+      z-index: 1;
+    }
+
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .top-bar {
+      background-color: #60c5ca;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .top-bar h1 {
+      margin: 0;
+      color: #000;
+      font-size: 22px;
+    }
+
+    .menu-icon {
+      cursor: pointer;
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    .side-menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 10px 0;
+      z-index: 1000;
+      min-width: 200px;
+    }
+
+    .side-menu a {
+      display: block;
+      padding: 10px 20px;
+      color: hotpink;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    .side-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .side-menu a:hover {
+      background-color: #fef1f7;
+    }
+
+    .logo-container {
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-symbol img {
+      width: 100px;
+      height: auto;
+    }
+
+    .site-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      color: blue;
+      margin: 10px 0 0;
+    }
+
+    .tagline {
+      font-size: 16px;
+      color: whitesmoke;
+      letter-spacing: 1px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 30px 20px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 1;
+    }
+
+    .content-box {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .content-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .content-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .content-box a {
+      display: block;
+      padding: 15px;
+      color: hotpink;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .content-box a:hover {
+      color: deeppink;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline preload="none" poster="poster.jpg" id="bg-video">
+    <source src="vid2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="top-bar">
+    <h1>ALL ABOUT LOVE</h1>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  <div id="sideMenu" class="side-menu">
+    <a href="page1.html">HOME</a>
+    <a href="page2.html">LOVE STORIES</a>
+    <a href="page3.html">TYPES OF LOVE</a>
+    <a href="page4.html">WELCOME TO FICTION LOVE</a>
+    <a href="page5.html">LOST LOVE</a>
+    <a href="page7.html">HOT PICK UP LINES</a>
+    <a href="page6.html">ABOUT</a>
+  </div>
+
+  <div class="logo-container">
+    <div class="logo-symbol"><img src="image2.jpg" alt="Logo"></div>
+    <div class="site-title">LOVENEST</div>
+    <div class="tagline">TRUE LOVE, REAL PEOPLE</div>
+  </div>
+
+  <!-- ✅ Responsive Two-by-Two Grid -->
+  <div class="grid-container">
+    <div class="content-box">
+      <img src="loved3.jpg" alt="Love Stories">
+      <a href="page2.html">LOVE STORIES</a>
+    </div>
+    <div class="content-box">
+      <img src="loved2.jpg" alt="Types of Love">
+      <a href="page3.html">TYPES OF LOVE</a>
+    </div>
+    <div class="content-box">
+      <img src="loved4.jpg" alt="Fiction Love">
+      <a href="page4.html">WELCOME TO FICTION LOVE</a>
+    </div>
+    <div class="content-box">
+      <img src="loved6.jpg" alt="Lost Love">
+      <a href="page5.html">LOST LOVE</a>
+    </div>
+    <div class="content-box">
+      <img src="loved7.jpg" alt="Hot Pickups">
+      <a href="page7.html">HOT PICK UP LINES</a>
+    </div>
+    <div class="content-box">
+      <img src="loved8.jpg" alt="About">
+      <a href="page6.html">ABOUT</a>
+    </div>
+  </div>
+
+  <footer>
+    <p style="color: blue;">© 2025 <i>Fredie Alex Productions</i></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("sideMenu");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+      const menu = document.getElementById("sideMenu");
+      const icon = document.querySelector('.menu-icon');
+      if (!menu.contains(event.target) && !icon.contains(event.target)) {
+        menu.style.display = "none";
+      }
+    };
+  </script>
+
+</body>
+</html>
